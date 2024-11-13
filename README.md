@@ -23,10 +23,9 @@ The **AI Research Proposal Generator** is an automated system that generates res
 ## Installation
 
 1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/0xPriyanshuJha/InnoAIte.git
-   ```
+  ```bash
+  git clone https://github.com/0xPriyanshuJha/InnoAIte.git
+  ```
 
 2. Navigate to your repository
   ```bash
