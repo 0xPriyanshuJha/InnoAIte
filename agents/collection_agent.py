@@ -7,7 +7,7 @@ class ResourceCollectionAgent:
     def collect_resources(self):
         resources = {}
         for case in self.use_cases:
-            kaggle_data = search_kaggle(case)
-            hf_data = search_huggingface(case)
+            kaggle_data = search_kaggle(case) or []
+            hf_data = search_huggingface(case) or []
             resources[case] = kaggle_data + hf_data
         return resources

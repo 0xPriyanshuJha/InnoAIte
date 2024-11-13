@@ -4,7 +4,7 @@ class ProposalAgent:
         self.company_info = company_info
         self.use_cases = use_cases
         self.resources = resources
-    
+
     def generate_proposal(self):
         proposal = f"## Industry Insights\n{self.industry_info}\n\n"
         proposal += f"## Company Focus\n{self.company_info}\n\n"
@@ -13,13 +13,12 @@ class ProposalAgent:
             proposal += f"{idx}. {case}\n"
         
         proposal += "\n## Resources\n"
-        for case, data in self.resources.items():
-            proposal += "\n## Resources\n"
-
         for case, links in self.resources.items():
             proposal += f"### {case}\n"
-            
-            for link in links:
-                proposal += f"- [{link['name']}]({link['url']})\n"
+            if links:
+                for link in links:
+                    proposal += f"- [{link['name']}]({link['url']})\n"
+            else:
+                proposal += "- No resources found.\n"
 
         return proposal
